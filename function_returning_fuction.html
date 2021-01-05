@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>function returning function</title>
+</head>
+<body>
+	<script>
+		function sumSquare(...params){
+			let squareArr = params.map(val=>val * val);
+			function sum(){
+				let addition = 0;
+				squareArr.forEach(function(val)
+					{
+					addition = addition+val;
+				})
+				return addition;
+
+			}
+			let result = sum();
+			return result;
+		}
+		let finalResult = sumSquare(1,2,3,4,5);
+		alert(finalResult)
+	</script>
+
+</body>
+</html>
